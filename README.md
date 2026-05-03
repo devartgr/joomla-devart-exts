@@ -4,7 +4,7 @@ Lightweight extension suite for Joomla 6, designed for high-performance editoria
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.1%2B-green)
-![Release](https://img.shields.io/badge/Version-1.1.1-orange)
+![Release](https://img.shields.io/badge/Version-1.1.2-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -92,11 +92,21 @@ This package installs:
 ## Installation
 
 1. Download the latest release from GitHub
-2. Go to System → Extensions → Install
+2. Go to **System → Extensions → Install**
 3. Upload the package zip file
-4. Open Components → DevArt Exts
+4. Open **Components → DevArt Exts**
 5. Configure settings
 6. Enable required plugins
+
+---
+
+## Joomla Updates
+
+DevArt Exts supports Joomla's native update system.
+
+Once installed, future updates will be available via:
+
+**System → Extensions → Update**
 
 ---
 
@@ -165,22 +175,16 @@ This package installs:
 
 ## Current Version
 
-1.1.1
+**1.1.2**
 
 ---
 
-## Changelog 1.1.1
+## Changelog 1.1.2
 
-- First public stable release
-- Snippets system
-- Code Snippets with copy and line numbers
-- DevArt Source for raw embeds
-- Social Share buttons (no SDK)
-- Open Graph integration
-- Modular architecture
-- Performance optimizations
-- Security hardening
-- Logging improvements
+- Added Joomla Update Server support
+- Enabled automatic updates via Joomla
+- Improved package consistency across extensions
+- Minor stability improvements
 
 ---
 
