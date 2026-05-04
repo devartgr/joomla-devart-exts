@@ -17,11 +17,27 @@ Designed for stability, security, and performance on high-traffic Joomla website
 
 ---
 
+## 📘 Documentation
+
+Full manual available here:
+
+👉 **[Download Manual (PDF)](docs/manual_v1.1.4.pdf)**
+
+Includes:
+- Dashboard overview
+- Snippets usage
+- Code Snippets
+- Source embeds (scripts & widgets)
+- Social Share & Open Graph
+- Settings & performance tuning
+
+---
+
 ## Features
 
 ### Snippets
 - Reusable safe HTML and iframe blocks
-- Article shortcode: {snippet id=X}
+- Article shortcode: `{snippet id=X}`
 - Editor button integration
 - No script or PHP execution
 - Optional caching
@@ -32,7 +48,7 @@ Designed for stability, security, and performance on high-traffic Joomla website
 - Escaped code blocks
 - Line numbers support
 - Copy-to-clipboard button
-- Article shortcode: {codesnippet id=X}
+- Article shortcode: `{codesnippet id=X}`
 - Safe display (no code execution)
 - Optional caching
 
@@ -43,9 +59,12 @@ Designed for stability, security, and performance on high-traffic Joomla website
 - Supports scripts, iframes, widgets
 
 Example:
+
+```html
 {source}
 <iframe src="https://example.com/embed"></iframe>
 {/source}
+```
 
 ---
 
@@ -91,9 +110,9 @@ This package installs:
 ## Installation
 
 1. Download the latest release from GitHub
-2. Go to System → Extensions → Install
+2. Go to **System → Extensions → Install**
 3. Upload the package zip file
-4. Open Components → DevArt Exts
+4. Open **Components → DevArt Exts**
 5. Configure settings
 6. Enable required plugins
 
@@ -105,22 +124,28 @@ DevArt Exts supports Joomla's native update system via GitHub.
 
 Once installed, future updates will be available via:
 
-System → Extensions → Update
+**System → Extensions → Update**
 
 ---
 
 ## Shortcodes
 
-Snippet:
+**Snippet**
+```text
 {snippet id=1}
+```
 
-Code Snippet:
+**Code Snippet**
+```text
 {codesnippet id=1}
+```
 
-Source:
+**Source**
+```html
 {source}
 <script src="https://example.com/script.js"></script>
 {/source}
+```
 
 ---
 
