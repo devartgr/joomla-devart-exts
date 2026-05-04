@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelogs>
+
+    <changelog>
+        <element>pkg_devart_exts</element>
+        <type>package</type>
+        <version>1.1.2</version>
+
+        <addition>
+            <item>Added Joomla Update Server support</item>
+            <item>Enabled automatic updates via Joomla Extensions Update system</item>
+        </addition>
+
+        <change>
+            <item>Improved installation and upgrade workflow</item>
+            <item>Improved package manifest structure</item>
+            <item>Improved version consistency across package and extensions</item>
+        </change>
+
+        <fix>
+            <item>Minor internal fixes for package handling</item>
+        </fix>
+
+        <note>
+            <item>Users on version 1.1.1 need to install this update manually once. After that, updates will work automatically.</item>
+        </note>
+    </changelog>
+
+
+    <changelog>
+        <element>pkg_devart_exts</element>
+        <type>package</type>
+        <version>1.1.1</version>
+
+        <addition>
+            <item>Snippets system for safe HTML / iframe insertion</item>
+            <item>Code Snippets with line numbers and copy button</item>
+            <item>DevArt Source for trusted raw embeds</item>
+            <item>Lightweight Social Share buttons without external SDKs</item>
+            <item>Automatic Open Graph integration</item>
+        </addition>
+
+        <change>
+            <item>Modular Joomla 6 component and plugins package</item>
+            <item>Centralized configuration panel</item>
+            <item>Editor button integrations</item>
+            <item>Improved cache handling stability</item>
+            <item>Improved dashboard status reporting</item>
+            <item>Improved uninstall behavior with data persistence options</item>
+            <item>Added logging support for debugging</item>
+        </change>
+
+        <security>
+            <item>No script execution allowed in Snippets or Code Snippets</item>
+            <item>Raw code isolated in DevArt Source</item>
+            <item>ACL and CSRF protection implemented</item>
+            <item>Safe database handling</item>
+        </security>
+    </changelog>
+
+</changelogs>
