@@ -5,12 +5,12 @@
         <description>DevArt Exts for Joomla - Modular content tools</description>
         <element>pkg_devart_exts</element>
         <type>package</type>
-        <version>1.1.2</version>
+        <version>1.1.3</version>
 
         <infourl title="DevArt Exts">https://devart.gr</infourl>
 
         <downloads>
-            <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-exts/releases/download/v1.1.2/pkg_devart_exts_v1.1.2.zip</downloadurl>
+            <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-exts/releases/download/v1.1.3/pkg_devart_exts_v1.1.3.zip</downloadurl>
         </downloads>
 
         <targetplatform name="joomla" version="6.*" />
