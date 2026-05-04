@@ -16,7 +16,7 @@
         <targetplatform name="joomla" version="6.*" />
         <php_minimum>8.1</php_minimum>
 
-        <sha256>50bc4f1839f85d2dc4fd6484076ce4adf8be064956e3a984b0fbb8a8b9691857</sha256>
+        <sha256>004a61faac65daf3191ba84c06a2622f045974a1b7650c212efa57aac99b450b</sha256>
 
         <changelogurl>https://raw.githubusercontent.com/devartgr/joomla-devart-exts/main/changelog.xml</changelogurl>
 
