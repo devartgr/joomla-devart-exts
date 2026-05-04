@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog>
+    <element name="DevArt Exts" type="package" client="site">
+    
+        <version number="1.1.2">
+
+            <note>
+
+                <![CDATA[
+
+                <h3>Update System Enabled</h3>
+
+                <h4>New</h4>
+
+                <ul>
+
+                    <li>Added Joomla Update Server support</li>
+
+                    <li>Automatic updates via Joomla Extensions Update system</li>
+
+                </ul>
+
+                <h4>Improvements</h4>
+
+                <ul>
+
+                    <li>Improved installation and upgrade workflow</li>
+
+                    <li>Improved package manifest structure</li>
+
+                    <li>Better version consistency across package and extensions</li>
+
+                </ul>
+
+                <h4>Fixes</h4>
+
+                <ul>
+
+                    <li>Minor internal fixes for package handling</li>
+
+                </ul>
+
+                <p><strong>Note:</strong> Users on version 1.1.1 need to install this update manually once. After that, updates will work automatically via Joomla.</p>
+
+                ]]>
+
+            </note>
+
+        </version>    
+        
+        <version number="1.1.1">
+            <note>
+                <![CDATA[
+                <h3>Initial Public Release</h3>
+
+                <h4>Features</h4>
+                <ul>
+                    <li>Snippets system for safe HTML / iframe insertion</li>
+                    <li>Code Snippets with line numbers and copy button</li>
+                    <li>DevArt Source for trusted raw embeds</li>
+                    <li>Lightweight Social Share buttons (no SDK)</li>
+                    <li>Automatic Open Graph integration</li>
+                </ul>
+
+                <h4>Architecture</h4>
+                <ul>
+                    <li>Modular Joomla 6 component + plugins package</li>
+                    <li>Centralized configuration panel</li>
+                    <li>Editor button integrations</li>
+                </ul>
+
+                <h4>Performance</h4>
+                <ul>
+                    <li>No external libraries or SDK dependencies</li>
+                    <li>Optional caching for snippets and code snippets</li>
+                    <li>Optimized for high-traffic environments</li>
+                </ul>
+
+                <h4>Security</h4>
+                <ul>
+                    <li>No script execution in Snippets or Code Snippets</li>
+                    <li>Raw code isolated in DevArt Source</li>
+                    <li>ACL and CSRF protection</li>
+                    <li>Safe database handling</li>
+                </ul>
+
+                <h4>Improvements</h4>
+                <ul>
+                    <li>Improved cache handling stability</li>
+                    <li>Improved dashboard status reporting</li>
+                    <li>Improved uninstall behavior with data persistence options</li>
+                    <li>Added logging support for debugging</li>
+                </ul>
+                ]]>
+            </note>
+        </version>
+
+    </element>
+</changelog>
