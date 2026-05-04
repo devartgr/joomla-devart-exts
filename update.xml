@@ -1,99 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<changelog>
-    <element name="DevArt Exts" type="package" client="site">
-    
-        <version number="1.1.2">
+<updates>
+    <update>
+        <name>DevArt Exts</name>
+        <description>DevArt Exts for Joomla - Modular content tools</description>
+        <element>pkg_devart_exts</element>
+        <type>package</type>
+        <version>1.1.2</version>
 
-            <note>
+        <infourl title="DevArt Exts">https://devart.gr</infourl>
 
-                <![CDATA[
+        <downloads>
+            <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-exts/releases/download/v1.1.2/pkg_devart_exts_v1.1.2.zip</downloadurl>
+        </downloads>
 
-                <h3>Update System Enabled</h3>
+        <targetplatform name="joomla" version="6.*" />
+        <php_minimum>8.1</php_minimum>
 
-                <h4>New</h4>
+        <sha256>50bc4f1839f85d2dc4fd6484076ce4adf8be064956e3a984b0fbb8a8b9691857</sha256>
 
-                <ul>
+        <changelogurl>https://raw.githubusercontent.com/devartgr/joomla-devart-exts/main/changelog.xml</changelogurl>
 
-                    <li>Added Joomla Update Server support</li>
-
-                    <li>Automatic updates via Joomla Extensions Update system</li>
-
-                </ul>
-
-                <h4>Improvements</h4>
-
-                <ul>
-
-                    <li>Improved installation and upgrade workflow</li>
-
-                    <li>Improved package manifest structure</li>
-
-                    <li>Better version consistency across package and extensions</li>
-
-                </ul>
-
-                <h4>Fixes</h4>
-
-                <ul>
-
-                    <li>Minor internal fixes for package handling</li>
-
-                </ul>
-
-                <p><strong>Note:</strong> Users on version 1.1.1 need to install this update manually once. After that, updates will work automatically via Joomla.</p>
-
-                ]]>
-
-            </note>
-
-        </version>    
-        
-        <version number="1.1.1">
-            <note>
-                <![CDATA[
-                <h3>Initial Public Release</h3>
-
-                <h4>Features</h4>
-                <ul>
-                    <li>Snippets system for safe HTML / iframe insertion</li>
-                    <li>Code Snippets with line numbers and copy button</li>
-                    <li>DevArt Source for trusted raw embeds</li>
-                    <li>Lightweight Social Share buttons (no SDK)</li>
-                    <li>Automatic Open Graph integration</li>
-                </ul>
-
-                <h4>Architecture</h4>
-                <ul>
-                    <li>Modular Joomla 6 component + plugins package</li>
-                    <li>Centralized configuration panel</li>
-                    <li>Editor button integrations</li>
-                </ul>
-
-                <h4>Performance</h4>
-                <ul>
-                    <li>No external libraries or SDK dependencies</li>
-                    <li>Optional caching for snippets and code snippets</li>
-                    <li>Optimized for high-traffic environments</li>
-                </ul>
-
-                <h4>Security</h4>
-                <ul>
-                    <li>No script execution in Snippets or Code Snippets</li>
-                    <li>Raw code isolated in DevArt Source</li>
-                    <li>ACL and CSRF protection</li>
-                    <li>Safe database handling</li>
-                </ul>
-
-                <h4>Improvements</h4>
-                <ul>
-                    <li>Improved cache handling stability</li>
-                    <li>Improved dashboard status reporting</li>
-                    <li>Improved uninstall behavior with data persistence options</li>
-                    <li>Added logging support for debugging</li>
-                </ul>
-                ]]>
-            </note>
-        </version>
-
-    </element>
-</changelog>
+        <maintainer>Kostas Stathopoulos</maintainer>
+        <maintainerurl>https://devart.gr</maintainerurl>
+    </update>
+</updates>
