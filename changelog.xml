@@ -1,5 +1,40 @@
+
 <?xml version="1.0" encoding="utf-8"?>
 <changelogs>
+
+    <changelog>
+        <element>pkg_devart_exts</element>
+        <type>package</type>
+        <version>1.1.3</version>
+
+        <fix>
+            <item>Fixed DevArt Source not rendering inside Joomla modules</item>
+            <item>Fixed `{source}` shortcode output appearing as plain text in module positions</item>
+            <item>Fixed compatibility issues with external widget scripts and iframe embeds</item>
+        </fix>
+
+        <change>
+            <item>Unified `{source}` parsing for both articles and modules</item>
+            <item>Improved compatibility with inline and external JavaScript execution</item>
+            <item>Updated all package, component and plugin manifests to version 1.1.3</item>
+        </change>
+
+        <addition>
+            <item>Added legacy Code Snippet shortcode support for [codehighlight id=X]</item>
+        </addition>
+
+        <improvement>
+            <item>Snippets editor modal now displays newest items first</item>
+            <item>Code Snippets editor modal now displays newest items first</item>
+            <item>Improved Code Snippets UI styling (line number separation)</item>
+        </improvement>
+
+        <note>
+            <item>{source} should be used only for trusted code (scripts, iframes, external widgets)</item>
+            <item>Legacy [codehighlight id=X] is supported for migration compatibility</item>
+        </note>
+    </changelog>
+
 
     <changelog>
         <element>pkg_devart_exts</element>
