@@ -4,7 +4,7 @@ Lightweight extension suite for Joomla 6, designed for high-performance editoria
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.1%2B-green)
-![Release](https://img.shields.io/badge/Version-1.1.2-orange)
+![Release](https://img.shields.io/badge/Version-1.1.4-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -21,7 +21,7 @@ Designed for stability, security, and performance on high-traffic Joomla website
 
 ### Snippets
 - Reusable safe HTML and iframe blocks
-- Article shortcode: `{snippet id=X}`
+- Article shortcode: {snippet id=X}
 - Editor button integration
 - No script or PHP execution
 - Optional caching
@@ -32,7 +32,7 @@ Designed for stability, security, and performance on high-traffic Joomla website
 - Escaped code blocks
 - Line numbers support
 - Copy-to-clipboard button
-- Article shortcode: `{codesnippet id=X}`
+- Article shortcode: {codesnippet id=X}
 - Safe display (no code execution)
 - Optional caching
 
@@ -42,11 +42,10 @@ Designed for stability, security, and performance on high-traffic Joomla website
 - Raw embed support for trusted code
 - Supports scripts, iframes, widgets
 
-```
+Example:
 {source}
 <iframe src="https://example.com/embed"></iframe>
 {/source}
-```
 
 ---
 
@@ -92,9 +91,9 @@ This package installs:
 ## Installation
 
 1. Download the latest release from GitHub
-2. Go to **System → Extensions → Install**
+2. Go to System → Extensions → Install
 3. Upload the package zip file
-4. Open **Components → DevArt Exts**
+4. Open Components → DevArt Exts
 5. Configure settings
 6. Enable required plugins
 
@@ -102,32 +101,26 @@ This package installs:
 
 ## Joomla Updates
 
-DevArt Exts supports Joomla's native update system.
+DevArt Exts supports Joomla's native update system via GitHub.
 
 Once installed, future updates will be available via:
 
-**System → Extensions → Update**
+System → Extensions → Update
 
 ---
 
 ## Shortcodes
 
-### Snippet
-```
+Snippet:
 {snippet id=1}
-```
 
-### Code Snippet
-```
+Code Snippet:
 {codesnippet id=1}
-```
 
-### Source
-```
+Source:
 {source}
 <script src="https://example.com/script.js"></script>
 {/source}
-```
 
 ---
 
@@ -137,6 +130,7 @@ Once installed, future updates will be available via:
 - Code Snippets are fully escaped
 - Raw code only allowed via DevArt Source
 - Joomla ACL & CSRF protection
+- GPL licensed (JED compliant)
 - Safe database handling
 
 ---
@@ -175,16 +169,17 @@ Once installed, future updates will be available via:
 
 ## Current Version
 
-**1.1.2**
+1.1.4
 
 ---
 
-## Changelog 1.1.2
+## Changelog 1.1.4
 
-- Added Joomla Update Server support
-- Enabled automatic updates via Joomla
-- Improved package consistency across extensions
-- Minor stability improvements
+- Added GPL license tag in all XML manifests (JED requirement)
+- Added GPL license headers in all PHP files
+- Cleaned package structure (removed system/hidden files)
+- Improved installation consistency across environments
+- Reverted experimental Import/Export changes for stability
 
 ---
 
@@ -198,4 +193,4 @@ https://devart.gr/
 
 ## License
 
-GPL v3
+GNU General Public License v3 or later
