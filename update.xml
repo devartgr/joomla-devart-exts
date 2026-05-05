@@ -3,7 +3,7 @@
     <update>
         <name>DevArt Exts</name>
         <description>DevArt Exts for Joomla - Modular content tools</description>
-        <element>pkg_devart_exts</element>
+        <element>devart_exts</element>
         <type>package</type>
         <version>1.1.7</version>
 
