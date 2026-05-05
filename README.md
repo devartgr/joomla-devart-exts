@@ -4,7 +4,7 @@ Lightweight extension suite for Joomla 6, designed for high-performance editoria
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.1%2B-green)
-![Release](https://img.shields.io/badge/Version-1.1.7-orange)
+![Release](https://img.shields.io/badge/Version-1.1.8-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -21,7 +21,7 @@ Designed for stability, security, and performance on high-traffic Joomla website
 
 Full manual available here:
 
-[Download Manual PDF](docs/manual_v1.1.7.pdf)
+[Download Manual PDF](docs/manual_v1.1.8.pdf)
 
 Includes:
 - Dashboard overview
@@ -96,12 +96,12 @@ This package installs:
 
 ## Installation
 
-1. Download the latest release from GitHub
-2. Go to System → Extensions → Install
-3. Upload the package zip file
-4. Open Components → DevArt Exts
-5. Configure settings
-6. Enable required plugins
+1. Download the latest release from GitHub  
+2. Go to System → Extensions → Install  
+3. Upload the package zip file  
+4. Open Components → DevArt Exts  
+5. Configure settings  
+6. Enable required plugins  
 
 ---
 
@@ -127,22 +127,22 @@ Source: {source}<script src="https://example.com/script.js"></script>{/source}
 
 ## Security Highlights
 
-- No script execution in Snippets
-- Code Snippets are fully escaped
-- Raw code only allowed via DevArt Source
-- Joomla ACL and CSRF protection
-- GPL licensed and JED compliant
-- Safe database handling
+- No script execution in Snippets  
+- Code Snippets are fully escaped  
+- Raw code only allowed via DevArt Source  
+- Joomla ACL and CSRF protection  
+- GPL licensed and JED compliant  
+- Safe database handling  
 
 ---
 
 ## Performance
 
-- No external libraries
-- Minimal frontend impact
-- CDN and Cloudflare friendly
-- Compatible with Joomla Page Cache
-- Designed for high-traffic production environments
+- No external libraries  
+- Minimal frontend impact  
+- CDN and Cloudflare friendly  
+- Compatible with Joomla Page Cache  
+- Designed for high-traffic production environments  
 
 ---
 
@@ -150,9 +150,9 @@ Source: {source}<script src="https://example.com/script.js"></script>{/source}
 
 For production sites using Joomla Page Cache:
 
-- Joomla Page Cache: ON
-- Joomla Gzip Page Compression: OFF if server or CDN compression is already enabled
-- Server or Cloudflare compression: ON
+- Joomla Page Cache: ON  
+- Joomla Gzip Page Compression: OFF if server or CDN compression is already enabled  
+- Server or Cloudflare compression: ON  
 
 This avoids double-compression issues while keeping cached pages fast.
 
@@ -182,19 +182,19 @@ This avoids double-compression issues while keeping cached pages fast.
 
 ## Current Version
 
-1.1.7
+1.1.8
 
 ---
 
-## Changelog 1.1.7
+## Changelog 1.1.8
 
-- Fixed Open Graph corruption when Joomla Page Cache is enabled
-- Fixed random or garbled characters in og:description under cached responses
-- Fixed frontend break caused by invalid cached output
-- Open Graph metadata now generated from raw Joomla article data
-- Improved compatibility with Joomla Page Cache and Cloudflare
-- Improved stability with Snippets and Source plugins
-- JED compliance retained with GPL license headers and manifests
+- Fixed Joomla Update system not detecting new versions in some installations  
+- Fixed incorrect update site registration (type=package → type=extension)  
+- Fixed update server linking issues between package and Joomla update system  
+- Fixed inconsistent package identity (packagename mismatch)  
+- Improved installer script to automatically repair update site configuration  
+- Improved compatibility with Joomla Page Cache and Cloudflare environments  
+- Cleaned package structure and removed system files  
 
 ---
 
