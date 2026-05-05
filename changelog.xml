@@ -4,6 +4,37 @@
     <changelog>
         <element>pkg_devart_exts</element>
         <type>package</type>
+        <version>1.1.7</version>
+
+        <fix>
+            <item>Fixed Open Graph corruption when Joomla Page Cache is enabled</item>
+            <item>Fixed random/garbled characters appearing in og:description under cached responses</item>
+            <item>Fixed double-processing issues affecting meta tags generation</item>
+            <item>Fixed frontend break in specific cases caused by invalid cached output</item>
+        </fix>
+
+        <change>
+            <item>Open Graph metadata now generated strictly from raw Joomla article data (title, introtext, images JSON)</item>
+            <item>Open Graph description cleaned from HTML, scripts and rendered plugin output</item>
+            <item>Open Graph tags now injected only via Joomla Document API for full compatibility with caching layers</item>
+            <item>Improved compatibility with Joomla Page Cache and Cloudflare caching</item>
+        </change>
+
+        <improvement>
+            <item>Improved stability when Snippets and Source plugins are used inside articles</item>
+            <item>Improved handling of article content parsing for metadata extraction</item>
+        </improvement>
+
+        <note>
+            <item>This release focuses on cache compatibility and Open Graph stability for production environments</item>
+            <item>Recommended setup: Joomla Page Cache ON, Joomla Gzip OFF when server or CDN compression is active</item>
+        </note>
+    </changelog>
+
+
+    <changelog>
+        <element>pkg_devart_exts</element>
+        <type>package</type>
         <version>1.1.4</version>
 
         <addition>
