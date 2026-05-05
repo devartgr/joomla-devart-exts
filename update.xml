@@ -10,7 +10,7 @@
         <infourl title="DevArt Exts">https://devart.gr</infourl>
 
         <downloads>
-            <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-exts/releases/download/v1.1.7/pkg_devart_exts_v1.1.7.zip</downloadurl>
+            <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-exts/releases/download/v1.1.7/pkg_devart_exts_v1.1.7fixed.zip</downloadurl>
         </downloads>
 
         <targetplatform name="joomla" version="6.*" />
