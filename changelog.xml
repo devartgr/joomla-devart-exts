@@ -4,6 +4,44 @@
     <changelog>
         <element>pkg_devart_exts</element>
         <type>package</type>
+        <version>1.1.8</version>
+
+        <fix>
+            <item>Fixed Joomla Update system not detecting new versions in some installations</item>
+            <item>Fixed incorrect update site registration (type=package to type=extension)</item>
+            <item>Fixed update server linking issues between package and Joomla update system</item>
+            <item>Fixed inconsistent package identity (packagename mismatch) causing update failures</item>
+            <item>Fixed corrupted frontend output under Joomla Page Cache in specific environments</item>
+            <item>Fixed edge cases with compressed responses (gzip / double compression)</item>
+        </fix>
+
+        <change>
+            <item>Improved installer script to automatically repair Joomla update site configuration</item>
+            <item>Improved update server stability across fresh and existing installations</item>
+            <item>Improved compatibility with Cloudflare and server-level compression setups</item>
+            <item>Standardized package identity and manifest consistency across releases</item>
+        </change>
+
+        <improvement>
+            <item>Improved Open Graph metadata stability when Joomla Page Cache is enabled</item>
+            <item>Improved overall reliability of package updates in production environments</item>
+        </improvement>
+
+        <cleanup>
+            <item>Removed macOS system files (__MACOSX, .DS_Store, ._*) from package</item>
+            <item>Cleaned package structure for consistent deployment</item>
+        </cleanup>
+
+        <note>
+            <item>This release focuses on Joomla update system reliability and production stability</item>
+            <item>No manual database fixes are required after installing this version</item>
+        </note>
+    </changelog>
+
+
+    <changelog>
+        <element>pkg_devart_exts</element>
+        <type>package</type>
         <version>1.1.7</version>
 
         <fix>
