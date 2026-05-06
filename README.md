@@ -206,6 +206,17 @@ https://devart.gr/
 
 ---
 
+## Disclaimer / Limitation of Liability
+This software is provided "as is", without warranty of any kind.
+DevArt shall not be held liable for any damages, data loss, downtime,
+security issues, or other problems resulting from the use or misuse
+of this software.
+Users are responsible for testing the software in their own environment
+and maintaining proper backups before installation or upgrades.
+Always test on a staging environment before using in production.
+
+---
+
 ## License
 
 GNU General Public License v3 or later
