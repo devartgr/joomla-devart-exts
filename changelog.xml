@@ -4,6 +4,66 @@
     <changelog>
         <element>pkg_devart_exts</element>
         <type>package</type>
+        <version>1.3.0</version>
+
+        <addition>
+            <item>Added mod_devartsource site module to the package (complementary to article {source} shortcodes)</item>
+            <item>Added Source Module administrator submenu and instance management page</item>
+            <item>Added Tools hub with JSON backup export/import for Snippets and Code Snippets</item>
+            <item>Added read-only Detect Head Scripts scanner for published site menu pages</item>
+            <item>Added Article Tools-style dashboard and section hubs for Snippets, Code Snippets, Source Code, Source Module, and Tools</item>
+            <item>Added Authors-style Back navigation on Snippets, Code Snippets, and Source Module list views</item>
+            <item>Added per-submenu administrator header images for Snippets, Code Snippets, Source Code, Source Module, and Tools</item>
+            <item>Added Access fields on snippet and code snippet edit forms</item>
+            <item>Added language packs for el-GR, fr-FR, de-DE, es-ES, it-IT, pt-PT, cs-CZ, nl-NL, pl-PL, ru-RU, uk-UA, ja-JP, tr-TR, and zh-CN</item>
+        </addition>
+
+        <change>
+            <item>First public release since 1.1.8 (intermediate 1.2.x builds were not published)</item>
+            <item>Social Share and Open Graph are no longer included; existing Exts Social/Open Graph plugins are fully uninstalled on update — use DevArt Article Tools for those features</item>
+            <item>Standalone pkg_devartsource is retired safely: module instances, params, and positions are preserved</item>
+            <item>Renamed administrator submenu Source to Source Code; Source Code usage documents editor insert via CMS Content &gt; DevArt Source</item>
+            <item>Replaced deprecated Factory::getCache with CacheControllerFactoryInterface across snippet and code-snippet cache paths</item>
+            <item>Centralised code-snippet cache clearing in CacheHelper (save, delete, publish, backup import, dashboard action)</item>
+            <item>Detect Head Scripts polish: category filters, duplicate grouping, third-party detection, Home/latest-article presets, copy/open/details actions</item>
+            <item>Administrator submenu active colour aligned with DevArt Article Tools red theme</item>
+            <item>Joomla native updates remain package-only (pkg_devart_exts)</item>
+        </change>
+
+        <security>
+            <item>Snippet persistent cache keys now include authorised view levels</item>
+            <item>Snippet cache lifetime now correctly treats configured seconds as minutes for Joomla Cache::setLifeTime()</item>
+            <item>Snippets editor button lists only snippets the current user may view</item>
+            <item>Code snippets now have per-item access levels; frontend render, editor button listing, and cache keys respect authorised view levels</item>
+            <item>Optional allowed user groups for {source}: editor button hidden and {source} blocks stripped on save when the saver is outside the list (empty = unrestricted; Super Users always allowed)</item>
+            <item>Code snippet cache is cleared after save, delete, and publish/unpublish</item>
+            <item>SnippetsModel list ordering uses a whitelist before SQL ORDER BY</item>
+            <item>Codesnippet edit and add/edit controller paths require core.create or core.edit</item>
+            <item>Dashboard cache-clear actions require core.manage</item>
+            <item>Standalone pkg_devartsource shell is removed without Installer::uninstall(package), preventing accidental destruction of absorbed mod_devartsource instances</item>
+        </security>
+
+        <fix>
+            <item>Admin active submenu now loads DevArt red reliably (absolute media stylesheet) matching Article Tools</item>
+            <item>Snippets list footer is centered; removed per-row {snippet id="…"} hint under the title (ID column remains)</item>
+        </fix>
+
+        <note>
+            <item>Public release replacing the previous public line at 1.1.8</item>
+            <item>Content plugin {source} and site module mod_devartsource are complementary surfaces — both remain</item>
+            <item>Never uninstall pkg_devartsource via Installer::uninstall(package) — that would destroy module instances</item>
+            <item>Snippet, code snippet, and {source} shortcode syntax is unchanged</item>
+            <item>Detect Head Scripts is read-only and does not inject or modify scripts</item>
+            <item>No manual database fixes are required after installing this version</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>Recommended update for all DevArt Exts installations on 1.1.8 or earlier</item>
+        </note>
+    </changelog>
+
+
+    <changelog>
+        <element>pkg_devart_exts</element>
+        <type>package</type>
         <version>1.1.8</version>
 
         <fix>
@@ -20,24 +80,17 @@
             <item>Improved update server stability across fresh and existing installations</item>
             <item>Improved compatibility with Cloudflare and server-level compression setups</item>
             <item>Standardized package identity and manifest consistency across releases</item>
-        </change>
-
-        <improvement>
             <item>Improved Open Graph metadata stability when Joomla Page Cache is enabled</item>
             <item>Improved overall reliability of package updates in production environments</item>
-        </improvement>
-
-        <cleanup>
-            <item>Removed macOS system files (__MACOSX, .DS_Store, ._*) from package</item>
-            <item>Cleaned package structure for consistent deployment</item>
-        </cleanup>
+        </change>
 
         <note>
+            <item>Removed macOS system files (__MACOSX, .DS_Store, ._*) from package</item>
+            <item>Cleaned package structure for consistent deployment</item>
             <item>This release focuses on Joomla update system reliability and production stability</item>
             <item>No manual database fixes are required after installing this version</item>
         </note>
     </changelog>
-
 
     <changelog>
         <element>pkg_devart_exts</element>
@@ -56,12 +109,9 @@
             <item>Open Graph description cleaned from HTML, scripts and rendered plugin output</item>
             <item>Open Graph tags now injected only via Joomla Document API for full compatibility with caching layers</item>
             <item>Improved compatibility with Joomla Page Cache and Cloudflare caching</item>
-        </change>
-
-        <improvement>
             <item>Improved stability when Snippets and Source plugins are used inside articles</item>
             <item>Improved handling of article content parsing for metadata extraction</item>
-        </improvement>
+        </change>
 
         <note>
             <item>This release focuses on cache compatibility and Open Graph stability for production environments</item>
@@ -69,16 +119,15 @@
         </note>
     </changelog>
 
-
     <changelog>
         <element>pkg_devart_exts</element>
         <type>package</type>
         <version>1.1.4</version>
 
-        <addition>
+        <security>
             <item>Added GPL license declaration in all XML manifest files (JED requirement)</item>
             <item>Added GPL license headers in all PHP files across the package</item>
-        </addition>
+        </security>
 
         <change>
             <item>Updated package to be fully compliant with Joomla Extensions Directory (JED) requirements</item>
@@ -96,7 +145,6 @@
         </note>
     </changelog>
 
-
     <changelog>
         <element>pkg_devart_exts</element>
         <type>package</type>
@@ -104,25 +152,19 @@
 
         <fix>
             <item>Fixed DevArt Source not rendering inside Joomla modules</item>
-            <item>Fixed `{source}` shortcode output appearing as plain text in module positions</item>
+            <item>Fixed {source} shortcode output appearing as plain text in module positions</item>
             <item>Fixed compatibility issues with external widget scripts and iframe embeds</item>
         </fix>
 
         <change>
-            <item>Unified `{source}` parsing for both articles and modules</item>
+            <item>Unified {source} parsing for both articles and modules</item>
             <item>Improved compatibility with inline and external JavaScript execution</item>
             <item>Updated all package, component and plugin manifests to version 1.1.3</item>
-        </change>
-
-        <addition>
             <item>Added legacy Code Snippet shortcode support for [codehighlight id=X]</item>
-        </addition>
-
-        <improvement>
             <item>Snippets editor modal now displays newest items first</item>
             <item>Code Snippets editor modal now displays newest items first</item>
             <item>Improved Code Snippets UI styling (line number separation)</item>
-        </improvement>
+        </change>
 
         <note>
             <item>{source} should be used only for trusted code (scripts, iframes, external widgets)</item>
@@ -130,16 +172,15 @@
         </note>
     </changelog>
 
-
     <changelog>
         <element>pkg_devart_exts</element>
         <type>package</type>
         <version>1.1.2</version>
 
-        <addition>
+        <new>
             <item>Added Joomla Update Server support</item>
             <item>Enabled automatic updates via Joomla Extensions Update system</item>
-        </addition>
+        </new>
 
         <change>
             <item>Improved installation and upgrade workflow</item>
@@ -156,19 +197,18 @@
         </note>
     </changelog>
 
-
     <changelog>
         <element>pkg_devart_exts</element>
         <type>package</type>
         <version>1.1.1</version>
 
-        <addition>
+        <new>
             <item>Snippets system for safe HTML / iframe insertion</item>
             <item>Code Snippets with line numbers and copy button</item>
             <item>DevArt Source for trusted raw embeds</item>
             <item>Lightweight Social Share buttons without external SDKs</item>
             <item>Automatic Open Graph integration</item>
-        </addition>
+        </new>
 
         <change>
             <item>Modular Joomla 6 component and plugins package</item>

@@ -1,222 +1,167 @@
 # DevArt Exts for Joomla
 
-Lightweight extension suite for Joomla 6, designed for high-performance editorial websites.
+Modular Joomla 6 content tools for reusable snippets, syntax-highlighted code blocks, and trusted raw embeds.
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
-![PHP](https://img.shields.io/badge/PHP-8.1%2B-green)
-![Release](https://img.shields.io/badge/Version-1.1.8-orange)
+![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
+![Release](https://img.shields.io/badge/Version-1.3.0-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
 
 ## Overview
 
-DevArt Exts is a modular package of Joomla 6 extensions built for safe content insertion, code display, and social sharing with minimal overhead.
+DevArt Exts is a production package for Joomla 6 sites that need safe reusable HTML, code blocks, and trusted embeds without external frameworks.
 
-Designed for stability, security, and performance on high-traffic Joomla websites.
-
----
-
-## Documentation
-
-Full manual available here:
-
-[Download Manual PDF](docs/manual_v1.1.8.pdf)
-
-Includes:
-- Dashboard overview
-- Snippets usage
-- Code Snippets
-- Source embeds
-- Social Share & Open Graph
-- Settings & performance tuning
+The package ships one administrator component, six plugins, and one site module. Social Share and Open Graph are **not** included — use **DevArt Article Tools** for those features.
 
 ---
 
-## Features
+## Version 1.3.0
 
-### Snippets
-- Reusable safe HTML and iframe blocks
-- Article shortcode: {snippet id=X}
-- Editor button integration
-- No script or PHP execution
-- Optional caching
+DevArt Exts **1.3.0** is the current **public** release.
 
-### Code Snippets
-- Escaped code blocks
-- Line numbers support
-- Copy-to-clipboard button
-- Article shortcode: {codesnippet id=X}
-- Safe display without code execution
-- Optional caching
+This is the first public release since **1.1.8**. Intermediate 1.2.x builds were development-only and were not published.
 
-### DevArt Source
-- Raw embed support for trusted code
-- Supports scripts, iframes and widgets
-- Example: {source}<iframe src="https://example.com/embed"></iframe>{/source}
+### Highlights in 1.3.0
 
-### Social Share
-- Facebook, X, WhatsApp, Copy Link
-- No external SDKs
-- Lightweight and fast
-- Configurable position
+**Core content tools**
+- **Snippets** — reusable safe HTML and iframe content via `{snippet id="X"}`
+- **Code Snippets** — syntax-highlighted blocks with copy button via `{codesnippet id=X}`
+- **Source Code** — trusted raw embeds (scripts, iframes, widgets) via `{source}...{/source}`
+- **Source Module** — `mod_devartsource` for module positions (complementary to article shortcodes)
 
-### Open Graph
-- Automatic Open Graph meta tags
-- Compatible with Joomla Page Cache and CDN caching
-- Title, description and image support
-- Twitter/X cards
-- Safe extraction from raw article data
-- Optional fallback image
+**Administrator experience**
+- Article Tools–style dashboard and section hubs (Snippets, Code Snippets, Source Code, Source Module, Tools)
+- Authors-style Back navigation on list views
+- Per-submenu header images and DevArt red active submenu styling
+- Source Code usage panel with editor insert note (CMS Content → DevArt Source)
 
----
+**Tools**
+- JSON backup export/import for Snippets and Code Snippets
+- Read-only Detect Head Scripts scanner with filters, third-party detection, duplicate grouping, and scan presets
 
-## Included Extensions
+**Security and access**
+- Snippet and code snippet access levels with cache keys that respect authorised view levels
+- Optional allowed user groups for `{source}` (editor button hidden and blocks stripped on save when unauthorised)
+- Automatic code-snippet cache invalidation on save, delete, and publish
+- Safe retirement of standalone `pkg_devartsource` without destroying module instances
 
-This package installs:
-
-- com_devart_exts
-- plg_content_devartsnippets
-- plg_editors-xtd_devartsnippetsbutton
-- plg_content_devartcodesnippets
-- plg_editors-xtd_devartcodesnippetsbutton
-- plg_content_devartsource
-- plg_editors-xtd_devartsourcebutton
-- plg_content_devartsocial
-- plg_system_devartopengraph
+**Languages**
+- Component and plugin language packs for en-GB, el-GR, fr-FR, de-DE, es-ES, it-IT, pt-PT, cs-CZ, nl-NL, pl-PL, ru-RU, uk-UA, ja-JP, tr-TR, and zh-CN
 
 ---
 
 ## Requirements
 
-- Joomla 6.x
-- PHP 8.1+
+- Joomla **6.0+**
+- PHP **8.3+**
+- MariaDB / MySQL
+
+---
+
+## Package Contents
+
+Package ID: `pkg_devart_exts`
+
+| Extension | Type | Purpose |
+|-----------|------|---------|
+| `com_devart_exts` | Component | Administrator dashboard, snippets, code snippets, source info, tools |
+| `plg_content_devartsnippets` | Content plugin | Renders `{snippet id="X"}` shortcodes |
+| `plg_content_devartcodesnippets` | Content plugin | Renders `{codesnippet id=X}` shortcodes |
+| `plg_content_devartsource` | Content plugin | Executes trusted `{source}...{/source}` embed blocks |
+| `plg_editors_xtd_devartsnippetsbutton` | Editor button | Inserts snippet shortcodes |
+| `plg_editors_xtd_devartcodesnippetsbutton` | Editor button | Inserts code snippet shortcodes |
+| `plg_editors_xtd_devartsourcebutton` | Editor button | Inserts source wrapper blocks |
+| `mod_devartsource` | Site module | Trusted embed output in module positions |
 
 ---
 
 ## Installation
 
-1. Download the latest release from GitHub  
-2. Go to System → Extensions → Install  
-3. Upload the package zip file  
-4. Open Components → DevArt Exts  
-5. Configure settings  
-6. Enable required plugins  
+Download the latest release:
+
+[`pkg_devart_exts_v1.3.0.zip`](https://github.com/devartgr/joomla-devart-exts/releases/download/v1.3.0/pkg_devart_exts_v1.3.0.zip)
+
+Install via **System → Install → Extensions**.
+
+The package installer enables all shipped plugins automatically.
+
+### Upgrade from 1.1.8 or earlier
+
+Install the 1.3.0 package ZIP over your existing installation. No manual database fixes are required.
+
+- Existing Social Share / Open Graph plugins from old Exts builds are removed on update if still present
+- Standalone `pkg_devartsource` is retired safely; `mod_devartsource` instances are preserved
+- Snippet, code snippet, and `{source}` shortcode syntax is unchanged
 
 ---
 
-## Joomla Updates
+## Updates
 
-DevArt Exts supports Joomla's native update system via GitHub.
+Updates are **package-only**. The package manifest owns the Joomla update server:
 
-Once installed, future updates will be available via:
+`https://raw.githubusercontent.com/devartgr/joomla-devart-exts/main/update.xml`
 
-System → Extensions → Update
+All extensions update together as one package.
 
 ---
 
 ## Shortcodes
 
-Snippet: {snippet id=1}
+| Syntax | Use for |
+|--------|---------|
+| `{snippet id="X"}` | Safe HTML / iframe snippets |
+| `{codesnippet id=X}` | Syntax-highlighted code blocks |
+| `{source}...{/source}` | Trusted scripts, iframes, embeds |
 
-Code Snippet: {codesnippet id=1}
+Scripts and PHP are **not** allowed in Snippets or Code Snippets. Use Source Code for trusted scripts.
 
-Source: {source}<script src="https://example.com/script.js"></script>{/source}
-
----
-
-## Security Highlights
-
-- No script execution in Snippets  
-- Code Snippets are fully escaped  
-- Raw code only allowed via DevArt Source  
-- Joomla ACL and CSRF protection  
-- GPL licensed and JED compliant  
-- Safe database handling  
+Insert `{source}` blocks from the editor toolbar: **CMS Content → DevArt Source**.
 
 ---
 
-## Performance
+## Repository Layout
 
-- No external libraries  
-- Minimal frontend impact  
-- CDN and Cloudflare friendly  
-- Compatible with Joomla Page Cache  
-- Designed for high-traffic production environments  
-
----
-
-## Recommended Cache Setup
-
-For production sites using Joomla Page Cache:
-
-- Joomla Page Cache: ON  
-- Joomla Gzip Page Compression: OFF if server or CDN compression is already enabled  
-- Server or Cloudflare compression: ON  
-
-This avoids double-compression issues while keeping cached pages fast.
+- `source/` — development source (single source of truth)
+- `scripts/validate.php` — repository validation
+- `scripts/build.php` — validation-first packaging with SHA-256
+- `builds/` — generated development packages
+- `releases/` — verified release packages
+- `update.xml` / `changelog.xml` — Joomla update server files (repo root)
+- `docs/` — architecture and current-state documentation
+- `qa/checklist.md` — Joomla QA checklist
 
 ---
 
-## Screenshots
+## Validate and Build
 
-### Dashboard
-![Dashboard](assets/screenshots/devart-exts-001dashboard.jpg)
+```shell
+php scripts/validate.php
+php scripts/build.php
+```
 
-### Snippets
-![Snippets](assets/screenshots/devart-exts-002snippets.jpg)
-
-### Code Snippets
-![Code Snippets](assets/screenshots/devart-exts-003codesnippets.jpg)
-
-### Source
-![Source](assets/screenshots/devart-exts-004source.jpg)
-
-### Social Share
-![Social Share](assets/screenshots/devart-exts-005social.jpg)
-
-### Settings
-![Settings](assets/screenshots/devart-exts-006settings.jpg)
+Repository validation does not replace Joomla runtime QA.
 
 ---
 
-## Current Version
+## Documentation
 
-1.1.8
-
----
-
-## Changelog 1.1.8
-
-- Fixed Joomla Update system not detecting new versions in some installations  
-- Fixed incorrect update site registration (type=package → type=extension)  
-- Fixed update server linking issues between package and Joomla update system  
-- Fixed inconsistent package identity (packagename mismatch)  
-- Improved installer script to automatically repair update site configuration  
-- Improved compatibility with Joomla Page Cache and Cloudflare environments  
-- Cleaned package structure and removed system files  
+- `docs/architecture.md` — product and repository architecture
+- `docs/current-state.md` — current capabilities and limitations
+- `qa/checklist.md` — installation and functional QA
 
 ---
 
-## Author
+## Integrity (1.3.0)
 
-Kostas Stathopoulos  
-DevArt  
-https://devart.gr/
-
----
-
-## Disclaimer / Limitation of Liability
-This software is provided "as is", without warranty of any kind.
-DevArt shall not be held liable for any damages, data loss, downtime,
-security issues, or other problems resulting from the use or misuse
-of this software.
-Users are responsible for testing the software in their own environment
-and maintaining proper backups before installation or upgrades.
-Always test on a staging environment before using in production.
+| | |
+|---|---|
+| **File** | `pkg_devart_exts_v1.3.0.zip` |
+| **SHA-256** | `68e4a1c1f4feb38c69278388875a6288684254ef3a3dc5454d3fdfa12b383d5e` |
 
 ---
 
 ## License
 
-GNU General Public License v3 or later
+GNU General Public License version 3 or later.
