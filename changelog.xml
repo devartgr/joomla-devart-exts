@@ -4,6 +4,29 @@
     <changelog>
         <element>pkg_devart_exts</element>
         <type>package</type>
+        <version>1.3.1</version>
+
+        <addition>
+            <item>Added el-GR, fr-FR, de-DE, es-ES, it-IT, pt-PT, cs-CZ, nl-NL, pl-PL, ru-RU, uk-UA, ja-JP, tr-TR, and zh-CN language packs for mod_devartsource</item>
+        </addition>
+
+        <fix>
+            <item>Greek Source Code usage note now mentions {source} blocks consistently with other locales</item>
+        </fix>
+
+        <note>
+            <item>No sprintf/formatting tokens were changed in existing strings</item>
+            <item>No manual database fixes are required after installing this version</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
+
+
+
+
+    <changelog>
+        <element>pkg_devart_exts</element>
+        <type>package</type>
         <version>1.3.0</version>
 
         <addition>

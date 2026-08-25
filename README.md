@@ -4,7 +4,7 @@ Modular Joomla 6 content tools for reusable snippets, syntax-highlighted code bl
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.3.0-orange)
+![Release](https://img.shields.io/badge/Version-1.3.1-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -17,13 +17,18 @@ The package ships one administrator component, six plugins, and one site module.
 
 ---
 
-## Version 1.3.0
+## Version 1.3.1
 
-DevArt Exts **1.3.0** is the current **public** release.
+DevArt Exts **1.3.1** is the current **public** release.
 
-This is the first public release since **1.1.8**. Intermediate 1.2.x builds were development-only and were not published.
+### Highlights in 1.3.1
 
-### Highlights in 1.3.0
+- Full language coverage for **`mod_devartsource`**: el-GR, fr-FR, de-DE, es-ES, it-IT, pt-PT, cs-CZ, nl-NL, pl-PL, ru-RU, uk-UA, ja-JP, tr-TR, and zh-CN (plus existing en-GB)
+- Greek Source Code usage note now mentions `{source}` blocks consistently with other locales
+
+Safe update from **1.3.0**. No database migrations.
+
+### Highlights from 1.3.0
 
 **Core content tools**
 - **Snippets** — reusable safe HTML and iframe content via `{snippet id="X"}`
@@ -48,7 +53,7 @@ This is the first public release since **1.1.8**. Intermediate 1.2.x builds were
 - Safe retirement of standalone `pkg_devartsource` without destroying module instances
 
 **Languages**
-- Component and plugin language packs for en-GB, el-GR, fr-FR, de-DE, es-ES, it-IT, pt-PT, cs-CZ, nl-NL, pl-PL, ru-RU, uk-UA, ja-JP, tr-TR, and zh-CN
+- Component, plugins, and Source Module language packs for en-GB, el-GR, fr-FR, de-DE, es-ES, it-IT, pt-PT, cs-CZ, nl-NL, pl-PL, ru-RU, uk-UA, ja-JP, tr-TR, and zh-CN
 
 ---
 
@@ -81,15 +86,15 @@ Package ID: `pkg_devart_exts`
 
 Download the latest release:
 
-[`pkg_devart_exts_v1.3.0.zip`](https://github.com/devartgr/joomla-devart-exts/releases/download/v1.3.0/pkg_devart_exts_v1.3.0.zip)
+[`pkg_devart_exts_v1.3.1.zip`](https://github.com/devartgr/joomla-devart-exts/releases/download/v1.3.1/pkg_devart_exts_v1.3.1.zip)
 
 Install via **System → Install → Extensions**.
 
 The package installer enables all shipped plugins automatically.
 
-### Upgrade from 1.1.8 or earlier
+### Upgrade from 1.3.0 or 1.1.8
 
-Install the 1.3.0 package ZIP over your existing installation. No manual database fixes are required.
+Install the 1.3.1 package ZIP over your existing installation. No manual database fixes are required.
 
 - Existing Social Share / Open Graph plugins from old Exts builds are removed on update if still present
 - Standalone `pkg_devartsource` is retired safely; `mod_devartsource` instances are preserved
@@ -153,12 +158,12 @@ Repository validation does not replace Joomla runtime QA.
 
 ---
 
-## Integrity (1.3.0)
+## Integrity (1.3.1)
 
 | | |
 |---|---|
-| **File** | `pkg_devart_exts_v1.3.0.zip` |
-| **SHA-256** | `68e4a1c1f4feb38c69278388875a6288684254ef3a3dc5454d3fdfa12b383d5e` |
+| **File** | `pkg_devart_exts_v1.3.1.zip` |
+| **SHA-256** | `ee99608864d8cdbe63c2ed611035b7e89835f8db30bc7e7a56aba63c1b2f39be` |
 
 ---
 
