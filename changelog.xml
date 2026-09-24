@@ -4,6 +4,36 @@
     <changelog>
         <element>pkg_devart_exts</element>
         <type>package</type>
+        <version>1.4.0</version>
+
+        <change>
+            <item>Joomla 7/8 forward-compatibility: plg_content_devartcodesnippets migrated to SubscriberInterface and ContentPrepareEvent</item>
+            <item>Replaced Document::addStyleSheet/addScript/addStyleDeclaration with WebAssetManager in admin and code snippets plugin</item>
+            <item>Replaced HTMLHelper behavior.* calls with WebAssetManager assets (core, multiselect, form.validate, keepalive)</item>
+            <item>Replaced deprecated DatabaseDriver service string with DatabaseInterface::class</item>
+            <item>Replaced Factory::getDate() with Joomla\CMS\Date\Date</item>
+            <item>SnippetTable constructor type-hint updated to DatabaseInterface</item>
+        </change>
+
+        <fix>
+            <item>Code snippets plugin loadAssets now skips safely when Document is unavailable and does not permanently mark assets as loaded</item>
+            <item>Content plugins guard language load when Language is not initialised</item>
+            <item>Restored missing HTMLHelper imports in admin list/edit/backup templates (Class "HTMLHelper" not found)</item>
+        </fix>
+
+        <note>
+            <item>No functional shortcode or runtime behaviour changes intended</item>
+            <item>No manual database fixes are required after installing this version</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
+
+
+
+
+    <changelog>
+        <element>pkg_devart_exts</element>
+        <type>package</type>
         <version>1.3.1</version>
 
         <addition>
