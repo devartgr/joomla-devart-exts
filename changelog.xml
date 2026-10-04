@@ -4,6 +4,52 @@
     <changelog>
         <element>pkg_devart_exts</element>
         <type>package</type>
+        <version>1.4.1</version>
+
+        <fix>
+            <item>Code snippets assets served from media/plg_content_devartcodesnippets via WebAssetManager (fixes broken plugins/content/.../media URIs)</item>
+            <item>Admin CSS WebAsset URIs use absolute Uri::root()</item>
+            <item>Snippet sanitize no longer strips PHP/XML open tags; script stripping remains best-effort</item>
+            <item>Backup import hygiene: AUTO_INCREMENT repair after commit, 20 MB limit, viewlevel access normalization, correct package element lookup</item>
+            <item>HeadDetect hardens redirects, body size, and timeout</item>
+            <item>Editor snippet/code-snippet modals lazy-load via com_ajax with server pagination</item>
+            <item>Snippet alias/title batch lookup no longer drops case/accent-variant shortcodes silently</item>
+            <item>TinyMCE/entity rewrites no longer cause false stripping of unchanged stored {source} blocks</item>
+        </fix>
+
+        <change>
+            <item>Empty {source} allowed_groups is fail-closed at save (Super Users / core.admin only); frontend render unchanged</item>
+            <item>Unauthorised savers keep existing {source} blocks after editor-safe normalization; new/modified blocks are stripped (CLI skips; API/scheduled tasks with identity remain subject to ACL)</item>
+            <item>Backup export streams JSON in chunks without full in-memory accumulation</item>
+            <item>Snippet save and backup import reject unknown Access view levels (never coerce to Public)</item>
+            <item>Aliases use OutputFilter::stringURLSafe with code-level uniqueness</item>
+            <item>Snippets plugin batch-preloads alias/title lookups with single-query fallback for collation mismatches; debug HTML comments for core.admin only</item>
+            <item>Editor snippet/code-snippet ajax list endpoints require component manage or content create/edit/edit.own</item>
+            <item>Content plugins use typed Joomla 6 content/model/module events</item>
+            <item>Content plugins rely on autoloadLanguage (manual constructor language loads removed)</item>
+        </change>
+
+        <removal>
+            <item>Removed dead administrator Social Share view/template</item>
+            <item>Removed Source editor-button “Insert empty wrapper” action (Insert with pasted code remains)</item>
+            <item>Removed dead provider devartLog helpers and unused Dashboard Social/Open Graph status fields</item>
+        </removal>
+
+        <note>
+            <item>Behaviour change: empty Source allowed_groups no longer means unrestricted save access</item>
+            <item>Behaviour change: Registered users without content write rights cannot enumerate snippet titles via com_ajax</item>
+            <item>Behaviour change: Editor save of an article with unchanged admin-inserted {source} preserves those blocks (normalized match)</item>
+            <item>Behaviour change: invalid Access on snippet save/import fails closed instead of becoming Public</item>
+            <item>Backup page hints separate exports for very large databases; import limit remains 20 MB</item>
+            <item>Snippet administrator editor improvement for rich HTML + iframes is tracked for a later milestone (docs/FOLLOW-UP-SNIPPET-EDITOR.md)</item>
+            <item>Shortcode syntax unchanged</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devart_exts</element>
+        <type>package</type>
         <version>1.4.0</version>
 
         <change>

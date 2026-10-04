@@ -6,12 +6,12 @@
         <element>pkg_pkg_devart_exts</element>
         <type>package</type>
         <client>site</client>
-        <version>1.4.0</version>
+        <version>1.4.1</version>
         <infourl title="DevArt Exts">https://github.com/devartgr/joomla-devart-exts</infourl>
         <downloads>
-            <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-exts/releases/download/v1.4.0/pkg_devart_exts_v1.4.0.zip</downloadurl>
+            <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-exts/releases/download/v1.4.1/pkg_devart_exts_v1.4.1.zip</downloadurl>
         </downloads>
-        <sha256>c7f859b9b693e884405d65d6570ed0f9a77a6dd8800ed58ca7673b205009a05c</sha256>
+        <sha256>4237efc3dcfc74ffd314fa04c9a19f73c446ec3bfca8747f896294eee573cd17</sha256>
         <tags>
             <tag>stable</tag>
         </tags>
