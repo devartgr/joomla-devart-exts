@@ -4,6 +4,21 @@
     <changelog>
         <element>pkg_devart_exts</element>
         <type>package</type>
+        <version>1.4.2</version>
+
+        <removal>
+            <item>Removed large DevArt branding header image from mod_devartsource administrator form (module is part of Exts)</item>
+        </removal>
+
+        <note>
+            <item>Shortcode syntax unchanged</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devart_exts</element>
+        <type>package</type>
         <version>1.4.1</version>
 
         <fix>

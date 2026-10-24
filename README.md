@@ -4,7 +4,7 @@ Modular Joomla 6 content tools for reusable snippets, syntax-highlighted code bl
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.4.1-orange)
+![Release](https://img.shields.io/badge/Version-1.4.2-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -17,18 +17,22 @@ The package ships one administrator component, six plugins, and one site module.
 
 ---
 
-## Version 1.4.1
+## Version 1.4.2
 
-DevArt Exts **1.4.1** is the current **public** release.
+DevArt Exts **1.4.2** is the current **public** release.
 
-### Highlights in 1.4.1
+### Highlights in 1.4.2
+
+- Removed large branding header image from the `mod_devartsource` administrator form (module ships inside Exts)
+
+Safe update from **1.4.1**. No database migrations. Shortcode syntax unchanged.
+
+### Highlights from 1.4.1
 
 - Hardened `{source}` save ACL (fail-closed empty allowed_groups) with editor-safe preserve of unchanged blocks
 - Streaming JSON backup export; fail-closed Access validation on snippet save/import
 - Editor ajax snippet lists require content write rights; alias/title shortcode batch lookup hardened
 - Code snippets assets served from `/media/plg_content_devartcodesnippets/` via WebAssetManager
-
-Safe update from **1.4.0** / **1.3.x**. No database migrations. Shortcode syntax unchanged.
 
 ### Highlights from 1.4.0
 
@@ -95,15 +99,15 @@ Package ID: `pkg_devart_exts`
 
 Download the latest release:
 
-[`pkg_devart_exts_v1.4.1.zip`](https://github.com/devartgr/joomla-devart-exts/releases/download/v1.4.1/pkg_devart_exts_v1.4.1.zip)
+[`pkg_devart_exts_v1.4.2.zip`](https://github.com/devartgr/joomla-devart-exts/releases/download/v1.4.2/pkg_devart_exts_v1.4.2.zip)
 
 Install via **System → Install → Extensions**.
 
 The package installer enables all shipped plugins automatically.
 
-### Upgrade from 1.4.0 / 1.3.1 / 1.3.0 / 1.1.8
+### Upgrade from 1.4.1 / 1.4.0 / 1.3.1 / 1.3.0 / 1.1.8
 
-Install the 1.4.1 package ZIP over your existing installation. No manual database fixes are required.
+Install the 1.4.2 package ZIP over your existing installation. No manual database fixes are required.
 
 - Existing Social Share / Open Graph plugins from old Exts builds are removed on update if still present
 - Standalone `pkg_devartsource` is retired safely; `mod_devartsource` instances are preserved
@@ -167,12 +171,12 @@ Repository validation does not replace Joomla runtime QA.
 
 ---
 
-## Integrity (1.4.1)
+## Integrity (1.4.2)
 
 | | |
 |---|---|
-| **File** | `pkg_devart_exts_v1.4.1.zip` |
-| **SHA-256** | `4237efc3dcfc74ffd314fa04c9a19f73c446ec3bfca8747f896294eee573cd17` |
+| **File** | `pkg_devart_exts_v1.4.2.zip` |
+| **SHA-256** | `cbbc5746ff3d4dcc2024c736dbb1bba8a388b083e307c5a77f8043e0e858ade9` |
 
 ---
 
