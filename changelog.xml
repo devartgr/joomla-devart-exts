@@ -4,6 +4,45 @@
     <changelog>
         <element>pkg_devart_exts</element>
         <type>package</type>
+        <version>1.4.3</version>
+
+        <fix>
+            <item>DashboardModel reads snippets_cache* config keys correctly</item>
+            <item>Code snippet published normalized to 0/1; missing ID on update fails cleanly</item>
+            <item>Snippet New/Edit from list no longer inherits layout=list (500 Layout list not found)</item>
+            <item>Snippet edit help reflects working alias/title shortcodes (no longer “coming later”)</item>
+        </fix>
+
+        <change>
+            <item>{source} save protection counts stored block multiplicity</item>
+            <item>onContentBeforeSave skips stored-row load when no {source} tags are submitted</item>
+            <item>Code Snippet edit view ACL: create for new, edit for existing</item>
+            <item>Head Detect uses framework Joomla\Http\HttpFactory</item>
+            <item>Code snippets plugin batch-preloads IDs for the current article</item>
+            <item>Shared AliasSlug helper for title/alias normalization (OutputFilter + pure fallback)</item>
+            <item>mod_devartsource migrated to Dispatcher / services provider (render behaviour unchanged)</item>
+            <item>Retired Social/Open Graph and standalone Source notices only when cleanup actually ran</item>
+            <item>Package installer script.php split into script/* traits (behaviour unchanged)</item>
+            <item>Backup import streams JSON row-by-row (no full in-memory decode); limit raised to 100 MB</item>
+            <item>Admin CSS WebAsset URIs use media-relative paths (safer under reverse proxy / Cloudflare)</item>
+            <item>Content plugins share AllowedContexts Support helper for enabled_contexts matching</item>
+            <item>Package update no longer force-enables shipped plugins (preserves intentional disable); install / discover_install still enable</item>
+            <item>Snippet create/edit and backup import require core.admin (Configure)</item>
+            <item>Snippet HTML uses iframe-safe InputFilter whitelist sanitization on save/import</item>
+        </change>
+
+        <note>
+            <item>Snippet HTML remains trusted-admin content; documented in admin help and README</item>
+            <item>Backup import streams up to 100 MB (or PHP upload limit); prefer separate-scope exports for very large sites</item>
+            <item>Read-only duplicate alias scan: php scripts/scan-duplicate-aliases.php /path/to/joomla</item>
+            <item>Shortcode syntax unchanged</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devart_exts</element>
+        <type>package</type>
         <version>1.4.2</version>
 
         <removal>

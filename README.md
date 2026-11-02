@@ -4,7 +4,7 @@ Modular Joomla 6 content tools for reusable snippets, syntax-highlighted code bl
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.4.2-orange)
+![Release](https://img.shields.io/badge/Version-1.4.3-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -17,15 +17,22 @@ The package ships one administrator component, six plugins, and one site module.
 
 ---
 
-## Version 1.4.2
+## Version 1.4.3
 
-DevArt Exts **1.4.2** is the current **public** release.
+DevArt Exts **1.4.3** is the current **public** release.
 
-### Highlights in 1.4.2
+### Highlights in 1.4.3
+
+- Snippet create/edit and backup import require Configure (`core.admin`)
+- Iframe-safe HTML whitelist sanitization on snippet save/import
+- Streaming backup import (up to 100 MB); package update preserves disabled plugins
+- `mod_devartsource` Dispatcher / services; installer script traits; media-relative admin CSS
+
+Safe update from **1.4.2**. No database migrations. Shortcode syntax unchanged.
+
+### Highlights from 1.4.2
 
 - Removed large branding header image from the `mod_devartsource` administrator form (module ships inside Exts)
-
-Safe update from **1.4.1**. No database migrations. Shortcode syntax unchanged.
 
 ### Highlights from 1.4.1
 
@@ -99,19 +106,20 @@ Package ID: `pkg_devart_exts`
 
 Download the latest release:
 
-[`pkg_devart_exts_v1.4.2.zip`](https://github.com/devartgr/joomla-devart-exts/releases/download/v1.4.2/pkg_devart_exts_v1.4.2.zip)
+[`pkg_devart_exts_v1.4.3.zip`](https://github.com/devartgr/joomla-devart-exts/releases/download/v1.4.3/pkg_devart_exts_v1.4.3.zip)
 
 Install via **System → Install → Extensions**.
 
-The package installer enables all shipped plugins automatically.
+On fresh install the package enables the six shipped plugins. Updates preserve each plugin’s enabled state.
 
-### Upgrade from 1.4.1 / 1.4.0 / 1.3.1 / 1.3.0 / 1.1.8
+### Upgrade from 1.4.2 / 1.4.1 / 1.4.0 / 1.3.1 / 1.3.0 / 1.1.8
 
-Install the 1.4.2 package ZIP over your existing installation. No manual database fixes are required.
+Install the 1.4.3 package ZIP over your existing installation. No manual database fixes are required.
 
 - Existing Social Share / Open Graph plugins from old Exts builds are removed on update if still present
 - Standalone `pkg_devartsource` is retired safely; `mod_devartsource` instances are preserved
 - Snippet, code snippet, and `{source}` shortcode syntax is unchanged
+- Intentionally disabled shipped plugins stay disabled after update
 
 ---
 
@@ -129,13 +137,15 @@ All extensions update together as one package.
 
 | Syntax | Use for |
 |--------|---------|
-| `{snippet id="X"}` | Safe HTML / iframe snippets |
+| `{snippet id="X"}` | Trusted HTML / iframe snippets (admin-trusted content) |
 | `{codesnippet id=X}` | Syntax-highlighted code blocks |
 | `{source}...{/source}` | Trusted scripts, iframes, embeds |
 
-Scripts and PHP are **not** allowed in Snippets or Code Snippets. Use Source Code for trusted scripts.
+Snippets store **trusted HTML** (iframes allowed). Content is whitelist-sanitized on save/import. Create/edit/import require Configure (`core.admin`) on `com_devart_exts`. Use `{source}` for trusted scripts.
 
 Insert `{source}` blocks from the editor toolbar: **CMS Content → DevArt Source**.
+
+See also: `docs/CLOUDFLARE-CACHE.md`, `docs/BACKUP-LARGE-RESTORE.md`.
 
 ---
 
@@ -171,12 +181,12 @@ Repository validation does not replace Joomla runtime QA.
 
 ---
 
-## Integrity (1.4.2)
+## Integrity (1.4.3)
 
 | | |
 |---|---|
-| **File** | `pkg_devart_exts_v1.4.2.zip` |
-| **SHA-256** | `cbbc5746ff3d4dcc2024c736dbb1bba8a388b083e307c5a77f8043e0e858ade9` |
+| **File** | `pkg_devart_exts_v1.4.3.zip` |
+| **SHA-256** | `95f095e7145f1d2dda07e564e19d31f3d39d01ffa902ce066c8935dc0b1f2ff2` |
 
 ---
 
